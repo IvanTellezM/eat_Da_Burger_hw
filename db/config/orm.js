@@ -1,5 +1,5 @@
 //import connection.js into this file
-var connection = require('../config/connection.js');
+var connection = require("../config/connection.js");
 
 //cretate the code that will execute MySql commands
 var orm = {

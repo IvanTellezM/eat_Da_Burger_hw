@@ -1,17 +1,17 @@
-var connection = require("..config/orm.js");
+var orm = require('../db/config/orm.js');
 
 var burgers = {
-	findAllBurgers: function(cb) {
-	  orm.selectAll("burgers", function(res){
-	    cb(res);
-	  });
-	}
   addBurger: function(burgerInput, cb){
-    orm.add("burgers", burgerInput, cb);
+    orm.addBurger("burgers", burgerInput, cb);
   },
   devourBurger: function(idInput, cb){
-    orm.devour("burgers", idInput, cb);
+    orm.devourBurger("burgers", idInput, cb);
   },
+  findAllBurgers: function(cb) {
+	  orm.selectAllBurgers("burgers", function(res){
+	    cb(res);
+	 });
+	}
 };
 
-module.exports = burgers;
+module.exports = burger;
