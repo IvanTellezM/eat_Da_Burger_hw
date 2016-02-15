@@ -1,11 +1,11 @@
 //set up the code to connect Node to MySQL
-var mysql = require('mysql');
+var mysql = require("mysql");
 
 var connection = mysql.createConnection({
-  host     : "localhost",
-  user     : "root",
-  database : "burgers_db"
-  port     : 3306
+	port: 3306,
+  host: "localhost",
+  user: "root",
+  database: "burgers_db"
 });
 
 connection.connect(function(err) {
